@@ -778,7 +778,7 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'drupaldev',
+  'database' => 'drupaldevelopment',
   'username' => 'Dan',
   'password' => '10202602',
   'prefix' => '',
