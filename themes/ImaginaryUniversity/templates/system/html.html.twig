@@ -61,6 +61,7 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">
@@ -70,5 +71,27 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+      window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#f5f5f5",
+      "text": "#000"
+    },
+    "button": {
+      "background": "#000"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-right",
+  "content": {
+    "message": "We use cookies to improve your experience. By using our sites, you agree to our use of cookies.",
+    "dismiss": "Accept",
+    "link": "Read more about it here.",
+    "href": "/info/privacy"
+  }
+});
+    </script>
   </body>
 </html>

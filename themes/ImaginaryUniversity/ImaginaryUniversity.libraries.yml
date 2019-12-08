@@ -2,6 +2,9 @@ framework:
   css:
     theme:
       css/style.css: {}
+    js:
+     theme:
+      js/imaginary.js: {}   
 
 # Uncomment for LESS source JavaScript files.
 #  js:
